@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>side bar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- box icon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- js link -->
+        <!-- <script src="javascript.js"></script> -->
+</head>
+<body>
+    
+        <nav id="hideSidebar" class="sidebar">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <img src="images/logo-gold.jpeg" alt="">
+                    </span>
+                    <div id="textHide" class="text header-text">
+                        <span class="name">Razia Sultana</span>
+                        <span class="profession">Web developer</span>
+                    </div>
+                </div>
+    
+    
+                <i onclick="togglehide()" class='bx bx-chevron-right toggle'></i>
+            </header>
+            <div class="menu-bar">
+                <div class="menu">
+    
+                    <li class="search-box">
+                            <i class='bx bx-search icon'></i>
+                            <input type="search" placeholder="Search..." name="" id="">
+                    </li>
+    
+    
+                    <ul class="menu-links">
+                        <li class="nav-links">
+                            <a href="#">
+                                <i class='bx bx-home icon'></i>
+                                <span id="textHide1" class="text nav-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#">
+                                <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                                <span id="textHide2" class="text nav-text">Revenue</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#">
+                                <i class='bx bx-bell icon'></i>
+                                <span  id="textHide3" class="text nav-text">Notification</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#">
+                                <i class='bx bx-pie-chart-alt icon'></i>
+                                <span id="textHide4"  class="text nav-text">Analytics</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#">
+                                <i class='bx bx-heart icon'></i>
+                                <span id="textHide5"  class="text nav-text">Likes</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#">
+                                <i class='bx bx-wallet icon'></i>
+                                <span id="textHide6"  class="text nav-text">Wallets</span>
+                            </a>
+                        </li>
+    
+                    </ul>
+                </div>
+    
+                  <div class="bottom-content">
+                    <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon'></i>
+                            <span  id="textHide7" class="text nav-text ">Logout</span>
+                        </a>
+                    </li>
+                    <li class="mode">
+                        <div class="moon-sun">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span id="textHide8"  class="mode-text text">Dark Mode</span>
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                  </div>
+    
+            </div>
+        </nav>
+
+
+<script>
+        let hideSidebar = document.getElementById('hideSidebar');
+        let btn = document.getElementById('hideSidebar');
+
+        function togglehide(){
+            if(hideSidebar.style.width != '80px'){
+                hideSidebar.style.width = '80px',
+                hideSidebar.style.transition = '.4s',
+                textHide.style.display = 'none',
+                textHide1.style.display = 'none',
+                textHide2.style.display = 'none',
+                textHide3.style.display = 'none',
+                textHide4.style.display = 'none',
+                textHide5.style.display = 'none',
+                textHide6.style.display = 'none',
+                textHide7.style.display = 'none',
+                textHide8.style.display = 'none'
+
+
+            }
+            else{
+                hideSidebar.style.width = '250px',                
+                textHide.style.display = 'flex',
+                textHide1.style.display = 'flex',
+                textHide2.style.display = 'flex',
+                textHide3.style.display = 'flex',
+                textHide4.style.display = 'flex',
+                textHide5.style.display = 'flex',
+                textHide6.style.display = 'flex',
+                textHide7.style.display = 'flex',
+                textHide8.style.display = 'flex'
+            }
+        }
+
+
+</script>
+</body>
+</html>
